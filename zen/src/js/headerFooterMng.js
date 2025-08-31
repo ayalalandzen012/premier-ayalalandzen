@@ -3,39 +3,68 @@ class SpecialHeader extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML =`
         <!-- Navbar Start -->
-	<div class="container-fluid nav-bar bg-transparent">
-	    <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-	        <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
-	            <img class="img-fluid" src="src/img/ayalalandpremier.jpg" alt="Icon" style="width: 250px; height: 30px;">
-	        </a>
-	        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-	            <span class="navbar-toggler-icon"></span>
-	        </button>
-	        <div class="collapse navbar-collapse" id="navbarCollapse">
-	            <div class="navbar-nav ms-auto">
-	                <a href="index.html" class="nav-item nav-link">Home</a>
-	                <a href="about.html" class="nav-item nav-link">About</a>
-	                <div class="nav-item dropdown">
-					  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="dropdownLink">Property</a>
-					  <div class="dropdown-menu rounded-0 m-0">
-					    <a href="#" class="dropdown-item" onclick="loadPage('ParkCentralTowers.html')" data-value="ParkCentralTowers">Park Central Towers</a>
-					    <a href="#" class="dropdown-item" onclick="loadPage('ArborLanes.html')" data-value="ArborLanes">Arbor Lanes</a>
-					    <a href="#" class="dropdown-item" onclick="loadPage('GardencourtResidences.html')" data-value="GardencourtResidences">Property Agent</a>
-					  </div>
-					</div>
-	                <div class="nav-item dropdown">
-	                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-	                    <div class="dropdown-menu rounded-0 m-0">
-	                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-	                        <a href="404.html" class="dropdown-item">404 Error</a>
-	                    </div>
-	                </div>
-	                <a href="contact.html" class="nav-item nav-link">Contact</a>
-	            </div>
-	            <a href="" class="btn btn-primary px-3 d-none d-lg-flex">Add Property</a>
-	        </div>
-	    </nav>
-	</div>
+<div class="container-fluid nav-bar bg-transparent">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4 navig">
+            <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+                <img class="img-fluid" src="../src/img/ayalalandpremier.jpg" alt="Icon" style="width: 250px; height: 30px;">
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="../index.html" class="nav-item nav-link">Home</a>
+                    <a href="../estate.html" class="nav-item nav-link">Estate</a>
+                     <!-- Property Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Property
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item dropend">
+                        <a class="dropdown-item" data-bs-toggle="dropdown" href="#">North Luzon<span
+                            class="float-end custom-toggle-arrow">&#187</span></a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="Miravera.html">Miravera</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropend">
+                        <a class="dropdown-item" data-bs-toggle="dropdown" href="#">South Luzon<span
+                            class="float-end custom-toggle-arrow">&#187</span></a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="thecourtyardsvermosa.html" value='thecourtyardsvermosa'>The Courtyards Vermosa</a></li>
+                          <li><a class="dropdown-item" href="ciela_at_aera_heights.html">Ciela at Aera Heights</a></li>
+                          <li><a class="dropdown-item" href="arcilo_nuvali.html">Arcilo Nuvali</a></li>
+                          <li><a class="dropdown-item" href="enara_nuvali.html">Enara Nuvali</a></li>
+                          <li><a class="dropdown-item" href="lanewoodhills.html">Lanewood Hills</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropend">
+                        <a class="dropdown-item" data-bs-toggle="dropdown" href="#">Metro Manila<span
+                        class="float-end custom-toggle-arrow">&#187</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="gardencourt_residences.html">Gardencourt Residences</a></li>
+                            <li><a class="dropdown-item" href="arborlanes.html">Arbor Lanes</a></li>
+                            <li><a class="dropdown-item" href="parkvillas.html">Park Villas</a></li>
+                            <li><a class="dropdown-item" href="parklinksNStowers.html">Parklinks North and South Towers</a></li>
+                            <li><a class="dropdown-item" href="pct.html">Park Central Towers</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropend">
+                        <a class="dropdown-item" data-bs-toggle="dropdown" href="#">Leisure<span
+                        class="float-end custom-toggle-arrow">&#187</span></a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="anvaya_cove.html">Anvaya Cove</a></li>
+                        </ul>
+                    </li>
+                </ul>
+              </li>
+                    <a href="../contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <a href="" class="btn btn-primary px-3 d-none d-lg-flex">ABOUT</a>
+            </div>
+        </nav>
+    </div>
 	        <!-- Navbar End -->
 			`
 		}
@@ -72,22 +101,22 @@ class SpecialHeader extends HTMLElement {
 	                        <h5 class="text-white mb-4">Photo Gallery</h5>
 	                        <div class="row g-2 pt-2">
 	                            <div class="col-4">
-	                                <img class="img-fluid rounded bg-light p-1" src="src/img/property-1.jpg" alt="">
+	                                <img class="img-fluid rounded bg-light p-1" src="../src/img/property-1.jpg" alt="">
 	                            </div>
 	                            <div class="col-4">
-	                                <img class="img-fluid rounded bg-light p-1" src="src/img/property-2.jpg" alt="">
+	                                <img class="img-fluid rounded bg-light p-1" src="../src/img/property-2.jpg" alt="">
 	                            </div>
 	                            <div class="col-4">
-	                                <img class="img-fluid rounded bg-light p-1" src="src/img/property-3.jpg" alt="">
+	                                <img class="img-fluid rounded bg-light p-1" src="../src/img/property-3.jpg" alt="">
 	                            </div>
 	                            <div class="col-4">
-	                                <img class="img-fluid rounded bg-light p-1" src="src/img/property-4.jpg" alt="">
+	                                <img class="img-fluid rounded bg-light p-1" src="../src/img/property-4.jpg" alt="">
 	                            </div>
 	                            <div class="col-4">
-	                                <img class="img-fluid rounded bg-light p-1" src="src/img/property-5.jpg" alt="">
+	                                <img class="img-fluid rounded bg-light p-1" src="../src/img/property-5.jpg" alt="">
 	                            </div>
 	                            <div class="col-4">
-	                                <img class="img-fluid rounded bg-light p-1" src="src/img/property-6.jpg" alt="">
+	                                <img class="img-fluid rounded bg-light p-1" src="../src/img/property-6.jpg" alt="">
 	                            </div>
 	                        </div>
 	                    </div>
@@ -112,10 +141,10 @@ class SpecialHeader extends HTMLElement {
 	                        </div>
 	                        <div class="col-md-6 text-center text-md-end">
 	                            <div class="footer-menu">
-	                                <a href="">Home</a>
-	                                <a href="">Cookies</a>
-	                                <a href="">Help</a>
-	                                <a href="">FQAs</a>
+	                                <a href=""></a>
+	                                <a href=""></a>
+	                                <a href=""></a>
+	                                <a href=""></a>
 	                            </div>
 	                        </div>
 	                    </div>
